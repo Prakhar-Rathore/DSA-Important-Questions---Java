@@ -1,3 +1,8 @@
+//Given an integer array arr and an integer k, modify the array by repeating it k times.
+//Return the maximum sub-array sum in the modified array. 
+//Note that the length of the sub-array can be 0 and its sum in that case is 0.
+//As the answer can be very large, return the answer modulo 109 + 7.
+
 import java.util.*;
 public class Main {
     static long m = 1000000007;

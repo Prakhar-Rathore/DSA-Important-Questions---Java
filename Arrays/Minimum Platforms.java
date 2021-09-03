@@ -35,3 +35,19 @@ class Solution {
         return res;
     }
 }
+
+// Most optimal way to solve this usin
+// O(n) time and O(n) space
+class Solution {
+    static int findPlatform(int at[], int dt[], int n) {
+        int[] hash = new int[2400];
+        for(int i : at) hash[i]++;
+        for(int i : dt) hash[i + 1]--;
+        int res = hash[0];
+        for(int i = 1; i < 2360; i++) {
+            hash[i] += hash[i - 1];
+            res = Math.max(hash[i], res);
+        }
+        return res;
+    }
+}
